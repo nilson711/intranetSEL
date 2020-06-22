@@ -39,7 +39,7 @@
                                 <th scope="col">NOME</th>
                                 <th scope="col">E-MAIL</th>
                                 <th scope="col">NIVEL</th>
-                                <th scope="col"></th>
+                                <th scope="col">OPÇÕES</th>
                             </tr>
                             </thead>
                             <tbody>

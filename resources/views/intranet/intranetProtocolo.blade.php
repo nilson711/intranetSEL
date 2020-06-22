@@ -30,7 +30,7 @@
 
     <h3>Olá Servidor!</h3>
     <p>Seja bem vindo a INTRANET da Secretaria de Estado de Esporte e Lazer do Distrito Federal.</p>
-    <p>Aqui você terá todas as ferramentas para auxiliá-lo no seuDD trabalho.</p>
+    <p>Aqui você terá todas as ferramentas para auxiliá-lo no seu trabalho.</p>
     <hr>
     <h4>Protocolos pendentes</h4>
 

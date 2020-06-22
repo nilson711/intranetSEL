@@ -78,10 +78,9 @@ Route::post('/intranet/inicio', function(){
     return view('intranet.intranetProtocolo');
 });
 
-
-//========================
-
-Route::get ('buscarDados', function (){
-    $users = DB::table('usersprotocolo')->where('levelUserProtocolo', '2')->get();
-    return $users;
+Route::get('/intranet/usuarios', function(){
+    return view('intranet.users.users');
 });
+
+
+

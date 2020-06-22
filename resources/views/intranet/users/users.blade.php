@@ -36,10 +36,10 @@
                         <table class="table table-striped">
                             <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Primeiro</th>
-                                <th scope="col">Último</th>
-                                <th scope="col">Nickname</th>
+                                <th scope="col">NOME</th>
+                                <th scope="col">E-MAIL</th>
+                                <th scope="col">NIVEL</th>
+                                <th scope="col"></th>
                             </tr>
                             </thead>
                             <tbody>

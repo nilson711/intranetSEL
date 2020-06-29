@@ -82,5 +82,7 @@ Route::get('/intranet/usuarios', function(){
     return view('intranet.users.users');
 });
 
+//================================================================================//
+
 
 

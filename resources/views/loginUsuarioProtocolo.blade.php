@@ -152,17 +152,29 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <h4 for="exampleInputEmail1" style="font-weight: bolder">Tipo de Usuário</h4>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="TipoUsuarioFisica">
-                                        <label class="form-check-label" for="TipoUsuarioFisica">Atleta</label>
-                                        &nbsp;
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="TipoUsuarioJuridica">
-                                        <label class="form-check-label" for="TipoUsuarioJuridica">Federação</label>
-                                    </div>
 
+                            <div class="row justify-content-center" style="text-align: center; display: flex">
+                                <div class="col-md-6 col-sm-12">
+                                    <h4 for="exampleInputEmail1" style="font-weight: bolder">Atleta / Usuário</h4>
+                                    <div class="card" style="width: 100%;">
+                                        <div class="card-body">
+{{--                                            <h5 class="card-title">Atleta</h5>--}}
+                                            <h6 class="card-subtitle mb-2 text-muted">Serviços para atleta e usuário comum.</h6>
+{{--                                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>--}}
+                                            <a href="#" id="TipoUsuarioFisica" class="btn btn-primary">Fazer Login</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <h4 for="exampleInputEmail1" style="font-weight: bolder">Federação</h4>
+                                    <div class="card" style="width: 100%;">
+                                        <div class="card-body">
+{{--                                            <h5 class="card-title">Ferederação</h5>--}}
+                                            <h6 class="card-subtitle mb-2 text-muted">Serviços para Federações.</h6>
+                                            {{--                                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>--}}
+                                            <a href="#" id="TipoUsuarioJuridica" class="btn btn-primary">Fazer Login</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

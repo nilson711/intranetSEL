@@ -39,7 +39,7 @@ Route::get('/sel/protocolo/user', function(){
 });
 
 Route::get('/sel/protocolo/userCad', function(){
-    return view('login.cadUsuarioProtocolo');
+    return view('cadastros.cadastroExterno');
 });
 
 Route::get('/sel/protocolo/newpassword', function(){
@@ -62,6 +62,10 @@ Route::get('/logout', function(){
     return view('login.loginUsuarioProtocolo');
 });
 
+Route::get('/sel/protocolo/cadEntidade', function(){
+    return view('cadastros.cadastroEntidade');
+});
+
 
 
 // ============================== ROTAS DA INTRANET ==============================//
@@ -81,6 +85,8 @@ Route::post('/intranet/inicio', function(){
 Route::get('/intranet/usuarios', function(){
     return view('intranet.users.users');
 });
+
+
 
 //================================================================================//
 

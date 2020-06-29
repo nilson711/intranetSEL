@@ -192,7 +192,7 @@
                 <small>
 							<span class="">
 								<span class="blue bolder">Getec</span>
-								SELDF &copy; 2020
+								SEL-DF &copy; 2020
 							</span>
                 </small>
 

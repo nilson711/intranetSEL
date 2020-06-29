@@ -14,6 +14,7 @@
     <script src="/sel_files/bootstrap.js.download" type="text/javascript"></script>
     <script type="text/javascript" src="/sel_files/cdn.min.js.download"></script>
     <link rel="dns-prefetch" href="http://s.w.org/">
+    <link rel="stylesheet" href="/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
     <script type="text/javascript">
         window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.esporte.df.gov.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.1"}};
         /*! This file is auto-generated */
@@ -115,7 +116,7 @@
                     <header id="masthead" class="site-header" role="banner">
                         <div class="header-main">
                             <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-{{--                                <button class="menu-toggle">Primary Menu</button>--}}
+                                {{--                                <button class="menu-toggle">Primary Menu</button>--}}
                                 <div class="menu-menusec-container">
                                     <ul id="primary-menu" class="nav-menu">
                                         <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2733" style="text-align: right">
@@ -145,95 +146,153 @@
             <div class="page-content offset-3" style="width: 50%">
                 <div class="row" style="margin-top: 15px" >
                     <div class="col-sm-12" style="margin-bottom: 10px" >
-                        <h3 style="text-align: center;padding-bottom: 5px; margin-top: 10px; font-weight: bolder">Login de usuário</h3>
+                        <h3 style="text-align: center;padding-bottom: 5px; margin-top: 10px; font-weight: bolder">Cadastro de Entidade</h3>
                     </div>
                 </div>
                 <hr>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
+                <form>
+                    {{-- CSRF--}}
+                    {{csrf_field()}}
 
-                            <div class="row justify-content-center" style="text-align: center; display: flex">
-                                <div class="col-md-6 col-sm-12">
-                                    <h4 for="exampleInputEmail1" style="font-weight: bolder">Atleta / Usuário</h4>
-                                    <div class="card" style="width: 100%;">
-                                        <div class="card-body">
-{{--                                            <h5 class="card-title">Atleta</h5>--}}
-                                            <h6 class="card-subtitle mb-2 text-muted">Serviços para atleta e usuário comum.</h6>
-{{--                                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>--}}
-                                            <a href="#" id="TipoUsuarioFisica" class="btn btn-primary">Fazer Login</a>
-                                            <div class="col-sm-12" style="text-align: center; margin-top: 15px">
-                                                <label >Ainda não tem cadastro? Clique <a href="#">AQUI</a></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <h4 for="exampleInputEmail1" style="font-weight: bolder">Federação</h4>
-                                    <div class="card" style="width: 100%;">
-                                        <div class="card-body">
-{{--                                            <h5 class="card-title">Ferederação</h5>--}}
-                                            <h6 class="card-subtitle mb-2 text-muted">Serviços para Federações.</h6>
-                                            {{--                                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>--}}
-                                            <a href="#" id="TipoUsuarioJuridica" class="btn btn-primary">Fazer Login</a>
-                                            <div class="col-sm-12" style="text-align: center; margin-top: 15px">
-                                                <label >Ainda não tem cadastro? Clique <a href="/sel/protocolo/cadEntidade">AQUI</a></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="alert-primary" style="padding: 5px 0px 5px 0px; text-align: center">
+                        <h5 style="font-weight: bolder; color: #515151">Dados da Entidade</h5>
+                    </div>
+                    <div class="form-group">
+                        <label for="nomeEntidade">Nome</label>
+                        <input type="text" class="form-control text-uppercase" id="nomeEntidade" aria-describedby="emailHelp">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label for="cnpjEntidade">CNPJ</label>
+                                <input type="text" class="form-control text-uppercase" id="cnpjEntidade" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label for="loginFisica">Cidade</label>
+                                <select class="form-control" id="cidadeEntidade">
+                                    <option selected disabled>SELECIONE A CIDADE</option>
+                                </select>
                             </div>
                         </div>
                     </div>
-                </div>
-                <form id="formLoginFisica">
-                    {{-- CSRF--}}
-                    {{csrf_field()}}
-                    <div class="form-group">
-                        <label for="loginFisica">CPF</label>
-                        <input type="text" class="form-control cpf" id="loginFisica" aria-describedby="emailHelp">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label for="phoneEntidade">Telefone</label>
+                                <input type="text" class="form-control text-uppercase" id="phoneEntidade" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label for="emailEntidade">E-mail Institucional</label>
+                                <input type="text" class="form-control text-uppercase" id="emailEntidade" aria-describedby="emailHelp">
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="senhaFisica">Senha</label>
-                        <input type="password" class="form-control" id="senhaFisica">
+                    <hr>
+                    <div class="alert-primary" style="padding: 5px 0px 5px 0px; text-align: center">
+                        <h5 style="font-weight: bolder; color: #515151">Dados do Responsável Legal</h5>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
-                </form>
-
-                <form id="formLoginJuridica">
-                    {{-- CSRF--}}
-                    {{csrf_field()}}
-                    <div class="form-group">
-                        <label for="loginJuridica">CNPJ</label>
-                        <input type="text" class="form-control cnpj" id="loginJuridica" aria-describedby="emailHelp">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label for="nomeRespLegal">Nome</label>
+                                <input type="text" class="form-control text-uppercase" id="nomeRespLegal" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label for="celRespLegal">Celular</label>
+                                <input type="text" class="form-control text-uppercase" id="celRespLegal" aria-describedby="emailHelp">
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="senhaJuridica">Senha</label>
-                        <input type="password" class="form-control" id="senhaJuridica" >
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label for="cpfRespLegal">CPF</label>
+                                <input type="text" class="form-control text-uppercase" id="cpfRespLegal" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label for="emailRespLegal">E-mail</label>
+                                <input type="text" class="form-control text-uppercase" id="emailRespLegal" aria-describedby="emailHelp">
+                            </div>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                    <hr>
+                    <div class="alert-primary" style="padding: 5px 0px 5px 0px; text-align: center">
+                        <h5 style="font-weight: bolder; color: #515151">Documentos Necessários ao Cadastramento</h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-11">
+                            <div class="form-group">
+                                <label for="estatutoEntidade">Estatuto da Entidade</label>
+                                <input type="file" class="form-control" id="estatutoEntidade" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-1" style="display: flex;">
+                            <i class="fa fa-check fa-3x justify-content-center" aria-hidden="true" style="color: #1a804b; padding-top: 20px"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-11">
+                            <div class="form-group">
+                                <label for="estatutoEntidade">Ata da Assembléia de Eleição</label>
+                                <input type="file" class="form-control" id="estatutoEntidade" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-1">
+                            <i class="fa fa-check fa-3x justify-content-center" aria-hidden="true" style="color: #1a804b; padding-top: 20px"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-11">
+                            <div class="form-group">
+                                <label for="estatutoEntidade">Inscrição e Situação Cadastral (CNPJ)</label>
+                                <input type="file" class="form-control" id="estatutoEntidade" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-1">
+                            <i class="fa fa-check fa-3x justify-content-center" aria-hidden="true" style="color: #1a804b; padding-top: 20px"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-11">
+                            <div class="form-group">
+                                <label for="estatutoEntidade">Documento Oficial do Responsável Legal</label>
+                                <input type="file" class="form-control" id="estatutoEntidade" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-1">
+                            <i class="fa fa-check fa-3x justify-content-center" aria-hidden="true" style="color: #1a804b; padding-top: 20px"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    <button type="submit" class="btn btn-primary btn-block" disabled>Enviar</button>
                 </form>
             </div>
         </div>
     </div>
-
-{{--    <div class="col-sm-12" style="text-align: center; margin-top: 15px">--}}
-{{--        <label >Ainda não tem cadastro? Clique <a href="#">AQUI</a></label>--}}
-{{--    </div>--}}
-
-<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-    <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-</a>
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
 
     <div class="footer">
         <div class="footer-inner">
             <div class="footer-content" style="text-align: center; margin-top: 20px">
-						<span class="bigger-120" >
-
-							SEL-DF &copy; 2020
-						</span>
-
-                &nbsp; &nbsp;
+                <small>
+                    <span class="">
+                        <span class="blue bolder">GETEC</span>
+                        SEL-DF &copy; 2020
+                    </span>
+                </small>                &nbsp; &nbsp;
             </div>
         </div>
     </div>
